@@ -1,80 +1,88 @@
 @font-face {
   font-family: "SF Pro Display Ultra Light Italic";
-  src: url("SFPRODISPLAYULTRALIGHTITALIC.OTF") format("opentype");
+  src: url("./media/SFPRODISPLAYULTRALIGHTITALIC.OTF") format("opentype");
 }
 
 @font-face {
   font-family: "SF Pro Display Thin Italic";
-  src: url("SFPRODISPLAYTHINITALIC.OTF") format("opentype");
+  src: url("./media/SFPRODISPLAYTHINITALIC.OTF") format("opentype");
 }
 
 @font-face {
   font-family: "SF Pro Display Semi Bold Italic";
-  src: url("SFPRODISPLAYSEMIBOLDITALIC.OTF") format("opentype");
+  src: url("./media/SFPRODISPLAYSEMIBOLDITALIC.OTF") format("opentype");
 }
 
 @font-face {
   font-family: "SF Pro Display Regular";
-  src: url("SFPRODISPLAYREGULAR.OTF") format("opentype");
+  src: url("./media/SFPRODISPLAYREGULAR.OTF") format("opentype");
 }
 
 @font-face {
   font-family: "SF Pro Display Medium";
-  src: url("SFPRODISPLAYMEDIUM.OTF") format("opentype");
+  src: url("./media/SFPRODISPLAYMEDIUM.OTF") format("opentype");
 }
 
 @font-face {
   font-family: "SF Pro Display Light Italic";
-  src: url("SFPRODISPLAYLIGHTITALIC.OTF") format("opentype");
+  src: url("./media/SFPRODISPLAYLIGHTITALIC.OTF") format("opentype");
 }
 
 @font-face {
   font-family: "SF Pro Display Heavy Italic";
-  src: url("SFPRODISPLAYHEAVYITALIC.OTF") format("opentype");
+  src: url("./media/SFPRODISPLAYHEAVYITALIC.OTF") format("opentype");
 }
 
 @font-face {
   font-family: "SF Pro Display Bold";
-  src: url("SFPRODISPLAYBOLD.OTF") format("opentype");
+  src: url("./media/SFPRODISPLAYBOLD.OTF") format("opentype");
 }
 
 @font-face {
   font-family: "SF Pro Display Black Italic";
-  src: url("SFPRODISPLAYBLACKITALIC.OTF") format("opentype");
+  src: url("./media/SFPRODISPLAYBLACKITALIC.OTF") format("opentype");
 }
 
 body {
   font-family: "SF Pro Display Regular", sans-serif;
 }
 
-h2 {
+h2,
+h3,
+h4,
+h5 b {
   font-family: "SF Pro Display Bold", sans-serif;
 }
 
-h3 {
-  font-family: "SF Pro Display Regular", sans-serif;
-}
+// h3 {
+//   font-family: "SF Pro Display Regular", sans-serif;
+// }
 
-h4 {
-  font-family: "SF Pro Display Semi Bold Italic", sans-serif;
-}
+// h4 {
+//   font-family: "SF Pro Display Semi Bold Italic", sans-serif;
+// }
 
-p {
-  font-family: "SF Pro Display Medium", sans-serif;
-}
+// h6 {
+//   font-family: "SF Pro Display Medium", sans-serif;
+// }
 
 a {
   font-family: "SF Pro Display Light Italic", sans-serif;
 }
 
-li {
+p,
+div,
+li,
+span {
   font-family: "SF Pro Display Regular", sans-serif;
 }
 html {
   color: #fff;
   background-color: #000000;
 }
-
+.white {
+  color: #fff !important;
+}
 #container {
   .hidden {
     // display: none !important;
@@ -86,9 +94,8 @@ html {
     align-items: flex-start;
     justify-content: space-between;
     .label {
-      font-size: 20px;
-      font-weight: 600;
-      width: 60%;
+      font-size: 18px;
+      width: 50%;
     }
     .view-all-btn {
       color: #0984fd;
@@ -106,7 +113,7 @@ html {
   .phone-header {
     z-index: 10;
     position: fixed;
-    background: #282828;
+    background: #000;
     top: 0;
     left: 0;
     right: 0;
@@ -141,7 +148,8 @@ html {
         flex: 1;
         .header_title-content {
           .title {
-            font-size: 20px;
+            font-size: 18px;
+            margin: 0;
           }
           .sub-title {
             font-size: 14px;
@@ -157,15 +165,16 @@ html {
             display: flex;
             align-items: center;
             .get-btn {
-              font-size: 13px;
-              font-weight: 600;
+              font-size: 14px;
+              font-weight: 500;
               text-transform: uppercase;
               background: #0984fd;
               border: none;
               outline: none;
               color: #fff;
-              padding: 6px 12px;
+              padding: 4px 16px;
               border-radius: 25px;
+              box-sizing: border-box;
               &:active {
                 background: rgba(#0984fd, 0.85);
               }
@@ -200,6 +209,8 @@ html {
         border-radius: 8px;
       }
       .sub-header-get {
+        display: flex;
+        align-items: center;
         .get-btn {
           font-size: 13px;
           font-weight: 600;
@@ -208,8 +219,9 @@ html {
           border: none;
           outline: none;
           color: #fff;
-          padding: 6px 12px;
+          padding: 4px 18px;
           border-radius: 25px;
+          line-height: 16px;
           &:active {
             background: rgba(#0984fd, 0.85);
           }
@@ -238,7 +250,7 @@ html {
       }
       .information_content {
         padding: 0 18px;
-        display: flex; 
+        display: flex;
         align-items: center;
         flex-wrap: nowrap;
         .content-item {
@@ -298,7 +310,7 @@ html {
     .device {
       margin: 12px 0;
       padding: 0 18px;
-      display: flex; 
+      display: flex;
       align-items: center;
       justify-content: space-between;
       font-size: 12px;
@@ -354,11 +366,10 @@ html {
         justify-content: space-between;
         align-items: center;
         .rate-cmt__body--count {
-          font-size: 60px;
+          font-size: 54px;
           font-weight: 700;
         }
         .rate-cmt__body--rate {
-
           .rate-item {
             display: grid;
             grid-template-columns: repeat(5, minmax(0, 1fr));
@@ -427,7 +438,7 @@ html {
             justify-content: space-between;
             .item__header-left {
               .name {
-                font-weight: 600;
+                font-weight: 500;
                 margin-bottom: 4px;
               }
               .rate {
@@ -452,12 +463,12 @@ html {
         }
       }
     }
-    
+
     .feature {
       padding: 0 18px;
       padding-bottom: 32px;
       .feature-desc {
-        display: flex; 
+        display: flex;
         justify-content: space-between;
         color: rgba(255, 255, 255, 0.55);
         margin: 8px 0;
@@ -472,7 +483,7 @@ html {
         }
       }
     }
-    
+
     .personal {
       padding: 0 18px;
       .personal-content {
@@ -576,8 +587,8 @@ html {
             }
           }
           .buy-in-app {
-            display: flex; 
-            justify-content: space-between; 
+            display: flex;
+            justify-content: space-between;
             align-items: center;
             margin-bottom: 4px;
           }
@@ -609,7 +620,7 @@ html {
         }
       }
     }
-    
+
     .other-game {
       padding: 0 18px;
       .slider {
@@ -657,11 +668,12 @@ html {
                   outline: none;
                   background: #1d1920;
                   color: #0984fd;
-                  padding: 4px 8px;
+                  padding: 4px 11px;
                   border-radius: 16px;
                   font-weight: 600;
                   text-transform: uppercase;
                   font-size: 12px;
+                  line-height: 14px;
                 }
                 .items-right-desc {
                   font-size: 8px;
@@ -679,4 +691,19 @@ html {
 
 .blue-text {
   color: #0984fd !important;
+}
+.time.white {
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+  line-height: 14px;
+}
+
+i.fa-star {
+  padding: 0 0.5px;
 }
